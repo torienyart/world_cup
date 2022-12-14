@@ -13,7 +13,7 @@ describe Team do
         expect(team.players).to eq([])
     end
 
-    xit 'can determine eliminated' do
+    it 'can determine eliminated' do
         expect(team.eliminated?).to be false
 
         team.eliminated = true
