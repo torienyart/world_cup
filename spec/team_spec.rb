@@ -21,16 +21,19 @@ describe Team do
         expect(team.eliminated?).to be true
     end
 
-    xit 'can add players' do
+    it 'can add players' do
         team.add_player(mbappe)
         team.add_player(pogba)
 
         expect(team.players).to eq([mbappe, pogba])
     end
 
-    xit 'can sort players by position' do
+    it 'can sort players by position' do
+        team.add_player(mbappe)
+        team.add_player(pogba)
+
         expect(team.players_by_position("midfielder")).to eq([pogba])
-        expect(team.players_by_position("defender")).to eq([mbappe])
+        expect(team.players_by_position("defender")).to eq([])
 
     end
 
