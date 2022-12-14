@@ -27,7 +27,7 @@ describe WorldCup do
         croatia.add_player(modric)
         croatia.add_player(vida)
 
-        expect(world_cup.active_players_by_position("midfielder")).to match[pogba, modric]
+        expect(world_cup.active_players_by_position("midfielder")).to eq([pogba, modric])
         
         croatia.eliminated = true
 
